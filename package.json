@@ -7,7 +7,7 @@
     "start": "babel-node cli.js",
     "build": "pack build",
     "publish": "pack publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo This project needs some tests"
   },
   "bin": {
     "dlook": "pkg/dist-node/index.bin.js"
@@ -41,9 +41,18 @@
   },
   "@pika/pack": {
     "pipeline": [
-      [ "@pika/plugin-standard-pkg" ],
-      [ "@pika/plugin-build-node" ],
-      [ "@pika/plugin-simple-bin", {"bin": "dlook"}]
+      [
+        "@pika/plugin-standard-pkg"
+      ],
+      [
+        "@pika/plugin-build-node"
+      ],
+      [
+        "@pika/plugin-simple-bin",
+        {
+          "bin": "dlook"
+        }
+      ]
     ]
   }
 }
