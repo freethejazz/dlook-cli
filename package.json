@@ -1,0 +1,48 @@
+{
+  "name": "dlook-cli",
+  "version": "0.1.0",
+  "description": "A cli tool to search official docker containers",
+  "main": "cli.js",
+  "scripts": {
+    "start": "babel-node cli.js",
+    "build": "pack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "dlook": "pkg/dist-node/index.bin.js"
+  },
+  "keywords": [
+    "docker",
+    "dockerhub",
+    "search",
+    "official",
+    "images",
+    "cli"
+  ],
+  "author": "@freethejazz",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "chalk": "^2.4.2",
+    "meow": "^5.0.0",
+    "ora": "^3.1.0",
+    "terminal-link": "^1.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "@babel/node": "^7.2.2",
+    "@pika/pack": "^0.3.2",
+    "@pika/plugin-build-node": "^0.3.11",
+    "@pika/plugin-simple-bin": "^0.3.11",
+    "@pika/plugin-standard-pkg": "^0.3.11",
+    "babel-preset-airbnb": "^3.2.0"
+  },
+  "@pika/pack": {
+    "pipeline": [
+      [ "@pika/plugin-standard-pkg" ],
+      [ "@pika/plugin-build-node" ],
+      [ "@pika/plugin-simple-bin", {"bin": "dlook"}]
+    ]
+  }
+}
