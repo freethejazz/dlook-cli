@@ -32,13 +32,12 @@ Examples
   }
 
   const searchString = cli.input.join(' ');
-  const q = encodeURIComponent(searchString);
 
   const params = {
     page_size: 25,
     type: 'image',
     image_filter: 'official',
-    q
+    q: searchString
   }
 
   const printResult = (image) => {
@@ -50,7 +49,7 @@ Examples
 
   const spinner = ora(`Searching '${searchString}' on Docker Hub`).start();
 
-  axios.get('https://hub.docker.com/api/content/v1/products/search', { params })
+  axios.get('https://store.docker.com/api/content/v1/products/search', { params })
     .then((response) => {
       const results = response.data;
       spinner.stop();

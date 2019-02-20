@@ -4,7 +4,6 @@
   "description": "A cli tool to search official docker containers",
   "main": "cli.js",
   "scripts": {
-    "start": "babel-node cli.js",
     "build": "pack build",
     "publish": "pack publish",
     "test": "echo This project needs some tests"
