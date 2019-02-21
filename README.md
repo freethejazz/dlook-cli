@@ -19,6 +19,9 @@ dlook --help
   Usage
     $ dlook <search-term>
 
+  Options
+    --with-latest-tags, -t Return 5 latest tags for each results
+
   Examples
     $ dlook graph database
     Found 4 results for graph database
@@ -30,7 +33,7 @@ dlook --help
     R is a system for statistical computation and graphics.
 
     orientdb
-    OrientDB a Multi-Model Open Source NoSQL DBMS that combines graphs and documents
+    OrientDB a Multi-Model Open Source NoSQL DBMS that combines graphs and documents.
 
     arrangodb
     ArangoDB - a distributed database with a flexible data model for documents, graphs, and key-values.
