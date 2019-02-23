@@ -3,6 +3,14 @@
   "version": "0.2.1",
   "description": "A cli tool to search official docker containers",
   "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freethejazz/dlook-cli.git"
+  },
+  "homepage": "https://github.com/freethejazz/dlook-cli",
+  "bugs": {
+    "url": "https://github.com/freethejazz/dlook-cli/issues"
+  },
   "scripts": {
     "build": "pack build",
     "publish": "pack publish",
